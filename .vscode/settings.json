@@ -1,0 +1,14 @@
+{
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.exclude": {
+    "o": true,
+    "node_modules": true
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib/"
+}
