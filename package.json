@@ -1,6 +1,6 @@
 {
   "name": "crochet-site-template",
-  "version": "0.0.0-dev",
+  "version": "0.0.0",
   "description": "static website template setup with crochet",
   "main": "index.js",
   "private": true,
