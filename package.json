@@ -5,10 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "rimraf o && run-p build-js build-css && echo done production build",
-    "build-debug": "rimraf o && run-p build-js-debug build-css && echo done debug build",
-    "build-js": "tsc && set NODE_ENV=production&& browserify o/script.js | uglifyjs -m > o/script.bundle.js && node o/crochet",
-    "build-js-debug": "tsc && browserify --debug o/script.js > o/script.bundle.js && node o/crochet",
+    "build": "rimraf o && run-p build-js build-css && echo ✔ done production build",
+    "build-debug": "rimraf o && run-p build-js-debug build-css && echo ✔ done debug build",
+    "build-js": "tsc && set NODE_ENV=production&& browserify o/script.js | uglifyjs -m > o/script.bundle.js && node o/crochet-script",
+    "build-js-debug": "tsc && browserify --debug o/script.js > o/script.bundle.js && node o/crochet-script",
     "build-css": "node-sass --source-map true s/style.scss o/style.css",
     "test": "echo Not test driven, lol && exit 0",
     "start": "http-server -p 8080"
@@ -16,9 +16,11 @@
   "author": "Chase Moskal <chasemoskal@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/marked": "0.0.28",
     "browserify": "^14.3.0",
-    "crochet": "^0.3.2",
+    "crochet": "^0.3.3",
     "http-server": "^0.9.0",
+    "marked": "^0.3.6",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
