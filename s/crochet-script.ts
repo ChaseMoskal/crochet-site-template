@@ -1,14 +1,31 @@
 
-import {renderArticles} from "crochet/o/rendering"
-import {read, readGlob, writeAll} from "crochet/o/files"
+import Crochet from "crochet"
+import {readFile, readFiles, writeFile, writeFiles} from "crochet/o/files"
 
-async function main() {
-  await writeAll(await renderArticles({
-    sourcedir: "s/pages/",
-    outdir: "o",
-    articles: await readGlob("s/pages/*.md"),
-    template: await read("s/templates/page.html")
+const crochet = new Crochet({
+  srcdir: "s/pages",
+  outdir: "o"
+})
+
+async function renderPages() {
+  return writeFiles(await crochet.pages({
+    pages: await readFiles("s/pages/*.md"),
+    template: await readFile("s/templates/page.html")
   }))
 }
 
-main().catch(error => { console.error(error, error.message) })
+async function renderIndexRedirect() {
+  return writeFile({
+    filepath: "o/index.html",
+    content: `
+<!doctype html>
+<meta http-equiv="refresh" content="0; url=./welcome/"/>
+`
+  })
+}
+
+(async function main() {
+  await renderPages()
+  await renderIndexRedirect()
+})()
+  .catch(error => { console.error(error, error.message) })
