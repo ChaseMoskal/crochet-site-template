@@ -1,12 +1,12 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "rootDirs": ["s"],
-    "outDir": "o",
-    "module": "commonjs",
-    "target": "es2017",
-    "moduleResolution": "node",
-    "lib": ["dom", "es2017"],
-    "sourceMap": true
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"rootDirs": ["s"],
+		"outDir": "o",
+		"module": "commonjs",
+		"target": "es2017",
+		"moduleResolution": "node",
+		"lib": ["dom", "es2017"],
+		"sourceMap": true
+	}
 }
