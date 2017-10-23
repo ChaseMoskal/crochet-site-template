@@ -4,7 +4,7 @@
     "rootDirs": ["s"],
     "outDir": "o",
     "module": "commonjs",
-    "target": "es6",
+    "target": "es2017",
     "moduleResolution": "node",
     "lib": ["dom", "es2017"],
     "sourceMap": true
