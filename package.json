@@ -8,10 +8,10 @@
 		"prepare": "npm run build -s",
 		"build": "rimraf o && run-p build-js build-css && echo ✔ done production build",
 		"build-debug": "rimraf o && run-p build-js-debug build-css && echo ✔ done debug build",
-		"build-js": "tsc && set NODE_ENV=production&& browserify o/script.js | uglifyjs -cm > o/script.bundle.js && node o/crochet-script",
+		"build-js": "tsc && browserify o/script.js -g [ envify --NODE_ENV production ] -g uglifyify > o/script.bundle.uncompressed.js && uglifyjs -cm < o/script.bundle.uncompressed.js > o/script.bundle.js && node o/crochet-script",
 		"build-js-debug": "tsc && browserify --debug o/script.js > o/script.bundle.js && node o/crochet-script",
 		"build-css": "node-sass --source-map true s/style.scss o/style.css",
-		"test": "echo Not test driven, lol && exit 0",
+		"test": "exit 0",
 		"start": "http-server -p 8080"
 	},
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
@@ -20,12 +20,14 @@
 		"@types/marked": "0.0.28",
 		"browserify": "14.5.0",
 		"crochet": "0.4.0",
+		"envify": "4.1.0",
 		"http-server": "0.10.0",
 		"marked": "0.3.6",
 		"node-sass": "4.5.3",
 		"npm-run-all": "4.1.1",
 		"rimraf": "2.6.2",
 		"typescript": "2.5.3",
-		"uglify-es": "3.1.5"
+		"uglify-es": "3.1.5",
+		"uglifyify": "4.0.4"
 	}
 }
