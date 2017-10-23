@@ -16,7 +16,7 @@ async function main() {
 	// Render blog posts
 	await writeFiles(await new Crochet({
 		srcdir: "s",
-		outdir: "o/blog"
+		outdir: "o"
 	}).pages({
 		pages: await readFiles("s/blog/*.md"),
 		template: await readFile("s/templates/blog-post.crochet.html")

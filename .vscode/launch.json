@@ -5,7 +5,7 @@
 			"type": "node",
 			"request": "launch",
 			"name": "run crochet script",
-			"program": "${workspaceRoot}/o/crochet-script.js"
+			"program": "${workspaceRoot}/o/crochet-script"
 		}
 	]
 }
