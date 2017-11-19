@@ -17,17 +17,17 @@
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/marked": "0.0.28",
+		"@types/marked": "0.3.0",
 		"browserify": "14.5.0",
 		"crochet": "0.4.0",
 		"envify": "4.1.0",
 		"http-server": "0.10.0",
 		"marked": "0.3.6",
-		"node-sass": "4.5.3",
-		"npm-run-all": "4.1.1",
+		"node-sass": "4.7.1",
+		"npm-run-all": "4.1.2",
 		"rimraf": "2.6.2",
-		"typescript": "2.5.3",
-		"uglify-es": "3.1.5",
+		"typescript": "2.6.1",
+		"uglify-es": "3.1.10",
 		"uglifyify": "4.0.4"
 	}
 }
