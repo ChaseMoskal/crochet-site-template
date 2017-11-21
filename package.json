@@ -19,7 +19,7 @@
 	"devDependencies": {
 		"@types/marked": "0.3.0",
 		"browserify": "14.5.0",
-		"crochet": "0.4.0",
+		"crochet": "0.4.1",
 		"envify": "4.1.0",
 		"http-server": "0.10.0",
 		"marked": "0.3.6",
